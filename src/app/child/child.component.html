@@ -1,0 +1,14 @@
+<div class="container">
+<!--Configuring the child's template with the @input-->
+  <p appStyle> Word :</p>
+  <input type = text name="word"/> 
+  <button (click)="save()" type="button" class="btn btn-primary">Save Word</button><br>
+
+<!--Configuring the child's template with the eventEmitter-->
+  <p appStyle for="item-input">Add an item:</p>
+  <input type="text" id="item-input" #newWord>
+  <button  class="btn btn-info" (click)="addNewWord(newWord.value)">Add Word</button>
+
+</div>
+
+

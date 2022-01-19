@@ -1,0 +1,27 @@
+
+<!-- diective personnalisé !-->
+<p class="card" style="width: 20rem; text-align: center;" appStyle>
+  Welcome! 
+</p>
+<br><br>
+    
+<!-- add the input and the event elements !-->
+<app-child 
+    [mot]="bonjour" 
+    (newWordEvent)="addWord($event)">
+</app-child>
+<ul>
+  <li *ngFor="let word of words">{{word}}</li>
+</ul>
+
+<!-- Angular ng-template, ng-container et ngTemplateOutlet !-->
+<ng-container 
+   *ngTemplateOutlet="template">
+</ng-container>
+<ng-template #template>
+  <div> {{words | json }} ...</div>
+</ng-template>
+
+
+
+
